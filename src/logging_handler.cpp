@@ -1,14 +1,4 @@
-#pragma once
-
-#include <WebServer.h>
-
-class LoggingHandler : public RequestHandler  {
-  public:
-    LoggingHandler() { }
-    bool canHandle(HTTPMethod method, String uri);
-  private:
-    static const char * httpMethod(HTTPMethod http_method_int);
-} ;
+#include "logging_handler.h"
 
 const char * LoggingHandler::httpMethod(HTTPMethod http_method_int) {
   switch( http_method_int ) {
