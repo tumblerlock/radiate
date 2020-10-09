@@ -1,0 +1,17 @@
+{
+  "name": "Radiate",
+  "version": "1.0.0",
+  "description": "A simple, modern wifi provisioning scheme.",
+  "keywords": "wifi provisioning iot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/hello-world.git"
+  },
+  "authors": [ ],
+  "license": "Apache 2.0",
+  "homepage": "https://tumblerlock.io",
+
+  "dependencies": { },
+  "frameworks": "*",
+  "platforms": "*"
+}
