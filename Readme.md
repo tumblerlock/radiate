@@ -22,7 +22,7 @@ Radiate depends on HTML which is uploaded to the ESP filesystem. From your proje
 $ bash -c "$(curl -s https://raw.githubusercontent.com/tumblerlock/radiate/master/setup.sh)"
 ```
 
-Or follow the steps in install.sh to manually install radiate and helper utilities into your project.
+Or follow the simple steps outlined in install.sh to manually install radiate and helper utilities into your project.
 
 ## Usage Example
 
@@ -47,7 +47,7 @@ void loop() {
 }
 ```
 
-## Developing the portal html
+## Developing the portal html (required)
 
 ### Prerequisites
 
@@ -56,13 +56,21 @@ void loop() {
 
 ### Workflow
 
-To save write cycles on SPIFFS, develop the portal locally.
+If you're just using the stock landing page, you can ignore this. Skip to **Upload the web assets to SPIFFS**.
+
+To save write cycles on SPIFFS, develop the portal locally. 
 
  - `scripts/serve_www` will start a webserver running at [http://localhost:3000](http://localhost:3000).
  - The server is configured to serve static assets from the www directory. 
  - Visit [/portal.html](http://localhost:3000/portal.html) and edit/reload as you go.
 
-Once the portal is ready for a deeper integration test `scripts/compress_www && scripts/upload_www`.
+Once the portal is ready for a deeper integration test, compress and upload the assets in the next section.
 
 Add a `radiate->obliviate();` at some easy to access logic path in order to facilitate testing.
 
+### Upload the web assets to SPIFFS
+
+Two helper scripts are provided to ease the process of installing and updating the web assets to SPIFFS.
+
+- `scripts/compress_www` will minify and gzip web assets, placing the output in the [`data` directory](https://docs.platformio.org/en/latest/platforms/espressif32.html#uploading-files-to-file-system-spiffs).
+- `scripts/upload_www` instructs platformio to upload the filesystem (`platformio run --target uploadfs`).
