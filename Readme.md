@@ -22,7 +22,7 @@ Radiate depends on HTML which is uploaded to the ESP filesystem. From your proje
 $ bash -c "$(curl -s https://raw.githubusercontent.com/tumblerlock/radiate/master/setup.sh)"
 ```
 
-Or follow the simple steps outlined in install.sh to manually install radiate and helper utilities into your project.
+Or follow the simple steps outlined in setup.sh to manually install radiate and helper utilities into your project.
 
 ## Usage Example
 
