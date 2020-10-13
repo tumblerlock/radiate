@@ -2,6 +2,8 @@
 
 port=${PORT:-3000}
 
+# Start a boring static file webserver. There are a bunch of other options here: https://gist.github.com/willurd/5720255
+
 ruby -rwebrick -e "
   WEBrick::HTTPServer.new(
     :BindAddress => '0.0.0.0',
