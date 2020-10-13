@@ -33,6 +33,9 @@ Or follow the simple steps outlined in setup.sh to manually install radiate and 
 Radiate *radiate = new Radiate("My IoT Project");
 
 void setup() {
+  // mount spiffs
+  SPIFFS.begin(false);
+  
   // if you need your device to forget it's saved wifi configuration:
   // radiate->obliviate();
   
