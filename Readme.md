@@ -1,6 +1,6 @@
 ![](logo.svg)
 
-## Radiate -- a modern wifi provisioning framework
+## Radiate -- a modern wifi captive portal
 
 Radiate is built to solve one problem: connect your wifi device to wifi.
 
