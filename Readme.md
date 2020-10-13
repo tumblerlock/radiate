@@ -52,7 +52,7 @@ void loop() {
 ### Prerequisites
 
 - [minify](https://github.com/tdewolff/minify) - `brew install tdewolff/tap/minify`
-- Active ruby, with webrick. System ruby should do fine.
+- Some static html server. The bundled script uses ruby+webrick, and any system ruby from the last 10 years should do. Alternatively, [there are multitude of static file server one-liners](https://gist.github.com/willurd/5720255) and any of them should do.
 
 ### Workflow
 
